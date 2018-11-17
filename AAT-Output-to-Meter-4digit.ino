@@ -56,7 +56,7 @@ AATsin = 0;
 AATcos = 0;
 for(x=1; x<=16; x++) //Total 16 samples
   {
-  AATcos = AATcos + 2*analogRead(5)-(AATsinmin+AATsinmax); //Read the sensor and subtract the offsets
+  AATcos = AATcos + 2*analogRead(5)-(AATcosmin+AATcosmax); //Read the sensor and subtract the offsets
   AATsin = AATsin + 2*analogRead(4)-(AATsinmin+AATsinmax);
   }
   angle = atan2(float(AATcos)/(AATcosmax-AATcosmin),float(AATsin)/(AATsinmax-AATsinmin)); //Calculate angle
